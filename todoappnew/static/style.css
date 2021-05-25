@@ -1,0 +1,97 @@
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: Calibri;
+}
+body{
+    background-color: skyblue;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#container{
+    background-color: white;
+    height: 500px;
+    width: 300px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#todoField{
+    width: 200px;
+    height: 40px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+#add{
+    width: 50px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0 -0.5rem 1rem #897eec, 0 0.5rem 1rem rgb(157, 139, 221);
+}
+#todoItems{
+    width: 280px;
+    height: 250px;
+    /* border: 2px solid blue; */
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item{
+    width: 250px;
+    height: 50px;
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.edit, .delete{
+    --is-raised: ; /* off by default */
+    padding: 0.4em 0.8em;
+    border: 1px solid var(--is-raised, rgb(0 0 0 / 0.1));
+    border-radius: 5px;
+    background: var(
+        --is-raised,
+        linear-gradient(hsl(0 0% 100% / 0.3), transparent)
+      )
+      hsl(200 100% 50%);
+    color: white;
+    font: 600 100%/1 sans-serif;
+    cursor: pointer;
+    box-shadow: var(
+      --is-raised,
+      0 1px hsl(0 0% 100% / 0.8) inset,
+      0 0.1em 0.1em -0.1em rgb(0 0 0 / 0.2)
+    );
+    text-shadow: var(--is-raised, 0 -1px 1px rgb(0 0 0 / 0.3));
+    border: none;
+}
+button:hover {
+    background-color: hsl(200 100% 40%);
+  }
+  
+  button:active {
+    box-shadow: var(--is-raised, 0 1px 0.2em black inset);
+  }
+  
+  #foo {
+    --is-raised: initial; /* turn on */
+  }
+.edit{
+    background-color: green;
+}
+.delete{
+    background-color: red;
+}
